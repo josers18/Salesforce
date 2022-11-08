@@ -17,5 +17,5 @@ This repository has several sample files for Salesforce CRM Analytics related fe
 
 ## Feedback
 
-If you have any feedback, please reach out via Feedback Form
+If you have any feedback, please reach out via Feedback [Form](https://github.com/josers18/Salesforce/issues/new/choose)
 
