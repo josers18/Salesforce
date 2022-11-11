@@ -1,3 +1,6 @@
+![GitHub language count](https://img.shields.io/github/languages/count/josers18/salesforce?logo=Github)
+![GitHub top language](https://img.shields.io/github/languages/top/josers18/salesforce?logo=Github&style=flat-square)
+![GitHub](https://img.shields.io/github/license/josers18/salesforce?logo=github)
 
 # Salesforce CRM Analytics Related Projects
 
