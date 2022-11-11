@@ -1,5 +1,5 @@
 # ***************************************************************************************************
-# PROJECT: BYOM Create TF Neural Net Regressor for Fuel Efficiency Dataset
+# PROJECT: BYOM Create TF Neural Net Regressor for Iris Dataset
 # AUTHOR: Jose Sifontes
 # ORIGIN: 2022-05-13
 # PURPOSE: Create neural network example for BYOM 
