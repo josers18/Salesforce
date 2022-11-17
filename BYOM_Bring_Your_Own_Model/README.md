@@ -1,7 +1,7 @@
 
 # CRMA - Einstein Discovery Bring Your Own Model
 
-This repository has several sample files for the Bring your own model functionality within CRM Analytics. I will hopefully be updating this repo with model examples as time permits, but please feel free to utilize these for your demos, or enablement. Thanks!
+This repository has several sample files for the Bring your own model functionality within CRM Analytics. I will hopefully be updating this repo with model examples as time permits, but please feel free to utilize these for your demos, or enablement, or even simply as a primer to get you started with BYOM model creation. Thanks!
 
 
 
