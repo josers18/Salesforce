@@ -1,0 +1,68 @@
+openapi: 3.0.0
+info:
+  title: Web Engagement Data Schema
+  version: 1.0.0
+paths: {}
+components:
+  schemas:
+    WebEngagement:
+      type: object
+      properties:
+        Account_Contact:
+          type: string
+          description: Randomly selected from a variable list of contacts
+        Case:
+          type: string
+          description: Case ID populated from a list of case IDs, empty when no IDs on list
+        Contact_Point:
+          type: string
+          description: Selected from Email Address from a variable
+        Created_Date:
+          type: string
+          format: date-time
+          description: Date Time field for creation date
+        Device_Ip_Address:
+          type: string
+          description: Random fake IP Address
+        Engagement_Channel:
+          type: string
+          description: Selected from a variable
+        Engagement_Channel_Action:
+          type: string
+          description: Selected from a variable
+        Engagement_Channel_Type:
+          type: string
+          description: Selected from a variable
+        Engagement_Type:
+          type: string
+          description: Selected from a variable
+        Engagement_Date_Time:
+          type: string
+          format: date-time
+          description: Same as Created_Date
+        Individual:
+          type: string
+          description: Randomly selected from a variable list of accounts
+        IP_Address:
+          type: string
+          description: Same as Device_Ip_Address
+        Name:
+          type: string
+          description: Selected from a variable
+        Referrer:
+          type: string
+          description: Selected from a variable
+        Session:
+          type: string
+          description: Randomly generated UUID
+        Website_Engagement_ID:
+          type: string
+          description: Randomly generated UUID
+        Website_Visit_Start_Time:
+          type: string
+          format: date-time
+          description: Same as Created_Date
+        Website_Visit_End_Time:
+          type: string
+          format: date-time
+          description: Randomly selected from a range of 1 to 15 minutes from Created_Date
