@@ -2,9 +2,9 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/josers18/salesforce?logo=Github&style=flat-square)
 ![GitHub](https://img.shields.io/github/license/josers18/salesforce?logo=github)
 
-# Salesforce CRM Analytics Related Projects
+# Salesforce CRM Related Projects
 
-This repository has several sample files for Salesforce CRM Analytics related features and functionality. Please feel free to use this as a jump off point to help you on your journey! Cheers!
+This repository has several sample files for Salesforce Data Cloud and CRM Analytics related features and functionality. Please feel free to use this as a jump off point to help you on your journey! Cheers!
 
 
 ## Authors
