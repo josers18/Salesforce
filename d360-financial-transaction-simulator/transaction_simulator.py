@@ -1,0 +1,517 @@
+"""
+Financial Transaction Simulator
+Generates realistic financial transactions based on MCC (Merchant Category Code) data.
+"""
+
+import pandas as pd
+import numpy as np
+import uuid
+from datetime import datetime, timedelta
+import random
+import argparse
+import sys
+
+
+class TransactionSimulator:
+    """Simulate financial transactions with realistic patterns."""
+    
+    def __init__(self, mcc_file_path):
+        """
+        Initialize the simulator with MCC data.
+        
+        Args:
+            mcc_file_path: Path to the MCC CSV file
+        """
+        self.mcc_data = pd.read_csv(mcc_file_path)
+        # Clean up column names (remove trailing spaces)
+        self.mcc_data.columns = self.mcc_data.columns.str.strip()
+        
+        # Separate direct deposits and regular transactions
+        self.direct_deposit_mcc = self.mcc_data[self.mcc_data['mcc'] == 9961].iloc[0] if 9961 in self.mcc_data['mcc'].values else None
+        self.regular_mccs = self.mcc_data[self.mcc_data['mcc'] != 9961]
+        
+        # Define business-focused categories (higher probability for business accounts)
+        self.business_categories = [
+            'Business services', 'Business Services',
+            'Professional services and membership organizations',
+            'Contracted services',
+            'Repair services',
+            'Agricultural services',
+            'Government services'
+        ]
+        
+        # Define business-focused transaction categories
+        self.business_tran_categories = [
+            'Business Services',
+            'Bills & Utilities',
+            'Shopping',  # Office supplies, equipment
+            'Auto & Transport',  # Business travel
+            'Fees & Charges'
+        ]
+        
+        # Personal categories (lower probability for business accounts)
+        self.personal_heavy_categories = [
+            'Restaurants',
+            'Fast Food',
+            'Amusement and entertainment',
+            'Retail outlets'  # General shopping
+        ]
+    
+    def get_filtered_mccs(self, account_type):
+        """
+        Get MCC list filtered by account type.
+        
+        Args:
+            account_type: 'personal' or 'business'
+            
+        Returns:
+            Filtered MCC dataframe
+        """
+        if account_type.lower() == 'business':
+            # For business accounts, heavily weight business-appropriate categories
+            # 70% business transactions, 30% general
+            business_mccs = self.regular_mccs[
+                (self.regular_mccs['category'].isin(self.business_categories)) |
+                (self.regular_mccs['Tran_category'].isin(self.business_tran_categories))
+            ]
+            
+            # Exclude pure entertainment and personal services
+            exclude_categories = ['Amusement and entertainment', 'Fast Food']
+            exclude_tran_categories = ['Entertainment']
+            
+            business_mccs = business_mccs[
+                ~business_mccs['category'].isin(exclude_categories) &
+                ~business_mccs['Tran_category'].isin(exclude_tran_categories)
+            ]
+            
+            return business_mccs
+        else:
+            # Personal accounts can have any transaction
+            return self.regular_mccs
+        
+    def generate_merchant_name(self, mcc_description):
+        """
+        Generate a merchant name based on MCC description.
+        
+        Args:
+            mcc_description: The MCC description
+            
+        Returns:
+            A merchant name string
+        """
+        # For specific brands, return as-is
+        if any(brand in mcc_description.upper() for brand in ['HILTON', 'MARRIOTT', 'SHERATON', 'HERTZ', 'AVIS', 'UNITED AIRLINES', 'AMERICAN AIRLINES']):
+            return mcc_description
+        
+        # Generic merchants - use description
+        return mcc_description
+    
+    def generate_amount_for_mcc(self, mcc_row, account_type='personal'):
+        """
+        Generate a realistic amount based on MCC category and account type.
+        
+        Args:
+            mcc_row: Row from MCC dataframe
+            account_type: 'personal' or 'business'
+            
+        Returns:
+            Float amount
+        """
+        category = mcc_row['category']
+        tran_type = mcc_row['Tran_Type']
+        
+        # Base amount ranges by category
+        amount_ranges = {
+            'Retail outlets': (10, 500),
+            'Restaurants': (15, 150),
+            'Fast Food': (5, 30),
+            'Hotels': (80, 500),
+            'Airlines': (150, 1500),
+            'Auto Rental': (40, 300),
+            'Gas Stations': (20, 100),
+            'Utilities': (50, 300),
+            'Transportation': (5, 200),
+            'Amusement and entertainment': (10, 200),
+            'Professional services and membership organizations': (50, 500),
+            'Business services': (30, 400),
+            'Repair services': (40, 300),
+            'Government services': (20, 500),
+            'Agricultural services': (50, 300),
+            'Contracted services': (100, 1000),
+            'Incoming Direct Deposit': (2000, 5000),
+            'Incoming Wire Transfer': (500, 10000),
+            'ACH Deposit': (100, 3000),
+            'ATM Deposit': (20, 500),
+            'Branch Deposit': (50, 5000),
+            'Zelle Credit': (10, 1000),
+            'Interest Income': (0.50, 50),
+            'Wire Transfer Fee': (15, 50),
+            'Monthly Service Fee': (5, 35),
+            'ACH Fee': (1, 5),
+            'Loan Fee': (10, 100),
+            'Late Fee': (15, 50),
+            'Overdraft Fee': (25, 40),
+            'NSF Fee': (25, 40),
+            'Loan Payment': (200, 2000),
+            'Credit Card Payment': (50, 3000),
+            'Interest Accrued': (1, 100),
+        }
+        
+        # Get range, default to generic range
+        min_amt, max_amt = amount_ranges.get(category, (10, 300))
+        
+        # Adjust amounts for business accounts
+        if account_type.lower() == 'business':
+            # Business accounts typically have higher transaction amounts
+            multiplier = 1.0
+            
+            if category in ['Business services', 'Professional services and membership organizations', 
+                          'Contracted services', 'Retail outlets']:
+                multiplier = 2.5  # Much higher for B2B services
+            elif category in ['Utilities', 'Hotels', 'Airlines']:
+                multiplier = 1.8  # Higher for business travel/utilities
+            elif category in ['Repair services', 'Transportation']:
+                multiplier = 1.5
+            else:
+                multiplier = 1.3  # Slight increase for other categories
+            
+            min_amt = min_amt * multiplier
+            max_amt = max_amt * multiplier
+        
+        # Generate amount with some variation
+        amount = round(random.uniform(min_amt, max_amt), 2)
+        
+        return amount
+    
+    def generate_transactions(self, account_ids, start_date, end_date, num_records, 
+                            account_types=None,
+                            direct_deposit_amount=3000.00, bonus_amount=500.00,
+                            include_direct_deposits=True, include_bonuses=True):
+        """
+        Generate financial transactions.
+        
+        Args:
+            account_ids: List of account IDs or single account ID string
+            start_date: Start date for transactions (string or datetime)
+            end_date: End date for transactions (string or datetime)
+            num_records: Total number of records to generate
+            account_types: Dict mapping account_id to 'personal' or 'business', or single type string
+                          If None, defaults to 'personal' for all accounts
+            direct_deposit_amount: Fixed amount for direct deposits (default: 3000.00)
+            bonus_amount: Fixed amount for bonuses (default: 500.00)
+            include_direct_deposits: Whether to include direct deposits (default: True)
+            include_bonuses: Whether to include bonuses (default: True)
+            
+        Returns:
+            DataFrame with generated transactions
+        """
+        # Convert to list if single account ID
+        if isinstance(account_ids, str):
+            account_ids = [account_ids]
+        
+        # Handle account_types parameter
+        if account_types is None:
+            # Default all to personal
+            account_types_map = {acc_id: 'personal' for acc_id in account_ids}
+        elif isinstance(account_types, str):
+            # Single type for all accounts
+            account_types_map = {acc_id: account_types.lower() for acc_id in account_ids}
+        elif isinstance(account_types, dict):
+            # Use provided mapping, default to personal if not specified
+            account_types_map = {acc_id: account_types.get(acc_id, 'personal').lower() 
+                               for acc_id in account_ids}
+        elif isinstance(account_types, list):
+            # List of types matching account_ids order
+            if len(account_types) != len(account_ids):
+                raise ValueError("Length of account_types list must match account_ids list")
+            account_types_map = {account_ids[i]: account_types[i].lower() 
+                               for i in range(len(account_ids))}
+        else:
+            raise ValueError("account_types must be None, string, dict, or list")
+        
+        # Convert dates to datetime
+        if isinstance(start_date, str):
+            start_date = pd.to_datetime(start_date)
+        if isinstance(end_date, str):
+            end_date = pd.to_datetime(end_date)
+        
+        # Calculate date range in days
+        date_range = (end_date - start_date).days
+        
+        transactions = []
+        data_date = datetime.now()
+        
+        # Calculate how many direct deposits and bonuses to generate per account
+        months_in_range = max(1, (end_date.year - start_date.year) * 12 + end_date.month - start_date.month + 1)
+        
+        # Generate direct deposits (twice a month) and bonuses (once a month) per account
+        if include_direct_deposits and self.direct_deposit_mcc is not None:
+            for account_id in account_ids:
+                account_type = account_types_map[account_id]
+                
+                # Adjust description and amounts for business accounts
+                if account_type == 'business':
+                    deposit_desc = 'Business Revenue Deposit'
+                    # Business accounts might have higher/variable deposits
+                    base_deposit = direct_deposit_amount * 2.5
+                else:
+                    deposit_desc = self.generate_merchant_name(self.direct_deposit_mcc['description'])
+                    base_deposit = direct_deposit_amount
+                
+                # Generate direct deposits on 1st and 15th of each month
+                current_date = start_date.replace(day=1)
+                while current_date <= end_date:
+                    # First deposit (1st of month)
+                    if current_date >= start_date:
+                        trans_date = current_date
+                        transactions.append({
+                            'AccountID': account_id,
+                            'Account_Type': account_type.title(),
+                            'TransactionID': str(uuid.uuid4()),
+                            'PostingDate': trans_date,
+                            'TransactionDate': trans_date,
+                            'Amount': base_deposit,
+                            'Description': deposit_desc,
+                            'Transaction_Category': self.direct_deposit_mcc['Tran_category'],
+                            'MCC': self.direct_deposit_mcc['mcc'],
+                            'MCC_Description': self.direct_deposit_mcc['description'],
+                            'Transaction_status': 'Posted',
+                            'Currency': 'USD',
+                            'Transaction_Type': self.direct_deposit_mcc['Tran_Type'],
+                            'Source_Transaction_Type': self.direct_deposit_mcc['Tran_Type'],
+                            'Data_Date': data_date
+                        })
+                    
+                    # Second deposit (15th of month)
+                    if current_date.day == 1:
+                        try:
+                            mid_month = current_date.replace(day=15)
+                            if mid_month >= start_date and mid_month <= end_date:
+                                transactions.append({
+                                    'AccountID': account_id,
+                                    'Account_Type': account_type.title(),
+                                    'TransactionID': str(uuid.uuid4()),
+                                    'PostingDate': mid_month,
+                                    'TransactionDate': mid_month,
+                                    'Amount': base_deposit,
+                                    'Description': deposit_desc,
+                                    'Transaction_Category': self.direct_deposit_mcc['Tran_category'],
+                                    'MCC': self.direct_deposit_mcc['mcc'],
+                                    'MCC_Description': self.direct_deposit_mcc['description'],
+                                    'Transaction_status': 'Posted',
+                                    'Currency': 'USD',
+                                    'Transaction_Type': self.direct_deposit_mcc['Tran_Type'],
+                                    'Source_Transaction_Type': self.direct_deposit_mcc['Tran_Type'],
+                                    'Data_Date': data_date
+                                })
+                        except ValueError:
+                            pass  # Handle months with fewer than 15 days (shouldn't happen)
+                    
+                    # Move to next month
+                    if current_date.month == 12:
+                        current_date = current_date.replace(year=current_date.year + 1, month=1, day=1)
+                    else:
+                        current_date = current_date.replace(month=current_date.month + 1, day=1)
+        
+        # Generate bonuses (once a month, using ACH Deposit MCC 9963)
+        if include_bonuses:
+            bonus_mcc = self.mcc_data[self.mcc_data['mcc'] == 9963].iloc[0] if 9963 in self.mcc_data['mcc'].values else None
+            if bonus_mcc is not None:
+                for account_id in account_ids:
+                    account_type = account_types_map[account_id]
+                    
+                    # Adjust bonus description and amount for business accounts
+                    if account_type == 'business':
+                        bonus_desc = 'Monthly Revenue Bonus - ' + self.generate_merchant_name(bonus_mcc['description'])
+                        bonus_amt = bonus_amount * 2.0  # Higher bonuses for business
+                    else:
+                        bonus_desc = 'Monthly Bonus - ' + self.generate_merchant_name(bonus_mcc['description'])
+                        bonus_amt = bonus_amount
+                    
+                    # Generate bonuses on last day of each month
+                    current_date = start_date.replace(day=1)
+                    while current_date <= end_date:
+                        # Last day of month
+                        if current_date.month == 12:
+                            next_month = current_date.replace(year=current_date.year + 1, month=1, day=1)
+                        else:
+                            next_month = current_date.replace(month=current_date.month + 1, day=1)
+                        
+                        last_day = next_month - timedelta(days=1)
+                        
+                        if last_day >= start_date and last_day <= end_date:
+                            transactions.append({
+                                'AccountID': account_id,
+                                'Account_Type': account_type.title(),
+                                'TransactionID': str(uuid.uuid4()),
+                                'PostingDate': last_day,
+                                'TransactionDate': last_day,
+                                'Amount': bonus_amt,
+                                'Description': bonus_desc,
+                                'Transaction_Category': bonus_mcc['Tran_category'],
+                                'MCC': bonus_mcc['mcc'],
+                                'MCC_Description': bonus_mcc['description'],
+                                'Transaction_status': 'Posted',
+                                'Currency': 'USD',
+                                'Transaction_Type': bonus_mcc['Tran_Type'],
+                                'Source_Transaction_Type': bonus_mcc['Tran_Type'],
+                                'Data_Date': data_date
+                            })
+                        
+                        # Move to next month
+                        current_date = next_month
+        
+        # Calculate remaining transactions to generate
+        remaining_records = num_records - len(transactions)
+        
+        # Generate remaining random transactions
+        for _ in range(remaining_records):
+            # Randomly select an account
+            account_id = random.choice(account_ids)
+            account_type = account_types_map[account_id]
+            
+            # Get filtered MCCs based on account type
+            filtered_mccs = self.get_filtered_mccs(account_type)
+            
+            # Randomly select an MCC from filtered list
+            mcc_row = filtered_mccs.sample(n=1).iloc[0]
+            
+            # Generate random date within range
+            random_days = random.randint(0, date_range)
+            trans_date = start_date + timedelta(days=random_days)
+            
+            # Generate amount based on account type
+            amount = self.generate_amount_for_mcc(mcc_row, account_type)
+            
+            # Create transaction
+            transactions.append({
+                'AccountID': account_id,
+                'Account_Type': account_type.title(),
+                'TransactionID': str(uuid.uuid4()),
+                'PostingDate': trans_date,
+                'TransactionDate': trans_date,
+                'Amount': amount,
+                'Description': self.generate_merchant_name(mcc_row['description']),
+                'Transaction_Category': mcc_row['Tran_category'],
+                'MCC': mcc_row['mcc'],
+                'MCC_Description': mcc_row['description'],
+                'Transaction_status': 'Posted',
+                'Currency': 'USD',
+                'Transaction_Type': mcc_row['Tran_Type'],
+                'Source_Transaction_Type': mcc_row['Tran_Type'],
+                'Data_Date': data_date
+            })
+        
+        # Create DataFrame
+        df = pd.DataFrame(transactions)
+        
+        # Sort by TransactionDate
+        df = df.sort_values('TransactionDate').reset_index(drop=True)
+        
+        return df
+
+
+def main():
+    """Main function to run the transaction simulator."""
+    parser = argparse.ArgumentParser(description='Generate simulated financial transactions')
+    parser.add_argument('--mcc-file', type=str, default='MCCs.csv',
+                       help='Path to MCC CSV file')
+    parser.add_argument('--account-ids', type=str, nargs='+', required=True,
+                       help='One or more account IDs (space-separated)')
+    parser.add_argument('--account-types', type=str, nargs='+', default=None,
+                       help='Account types for each account ID: "personal" or "business" (space-separated, must match account-ids order). If not provided, defaults to personal for all accounts.')
+    parser.add_argument('--start-date', type=str, required=True,
+                       help='Start date for transactions (YYYY-MM-DD)')
+    parser.add_argument('--end-date', type=str, required=True,
+                       help='End date for transactions (YYYY-MM-DD)')
+    parser.add_argument('--num-records', type=int, default=100,
+                       help='Number of records to generate (default: 100)')
+    parser.add_argument('--output-file', type=str, default='generated_transactions.csv',
+                       help='Output CSV file name (default: generated_transactions.csv)')
+    parser.add_argument('--direct-deposit-amount', type=float, default=3000.00,
+                       help='Fixed amount for direct deposits (default: 3000.00)')
+    parser.add_argument('--bonus-amount', type=float, default=500.00,
+                       help='Fixed amount for bonuses (default: 500.00)')
+    parser.add_argument('--no-direct-deposits', action='store_true',
+                       help='Exclude direct deposits')
+    parser.add_argument('--no-bonuses', action='store_true',
+                       help='Exclude bonuses')
+    
+    args = parser.parse_args()
+    
+    # Initialize simulator
+    print("Initializing Transaction Simulator...")
+    simulator = TransactionSimulator(args.mcc_file)
+    
+    # Validate account types if provided
+    if args.account_types:
+        if len(args.account_types) != len(args.account_ids):
+            print(f"ERROR: Number of account types ({len(args.account_types)}) must match number of account IDs ({len(args.account_ids)})")
+            sys.exit(1)
+        
+        # Validate each account type
+        valid_types = ['personal', 'business']
+        for acc_type in args.account_types:
+            if acc_type.lower() not in valid_types:
+                print(f"ERROR: Invalid account type '{acc_type}'. Must be 'personal' or 'business'")
+                sys.exit(1)
+    
+    # Generate transactions
+    print(f"Generating {args.num_records} transactions...")
+    print(f"Account IDs: {', '.join(args.account_ids)}")
+    if args.account_types:
+        print(f"Account Types: {', '.join(args.account_types)}")
+    else:
+        print(f"Account Types: personal (default for all)")
+    print(f"Date Range: {args.start_date} to {args.end_date}")
+    
+    df = simulator.generate_transactions(
+        account_ids=args.account_ids,
+        start_date=args.start_date,
+        end_date=args.end_date,
+        num_records=args.num_records,
+        account_types=args.account_types,
+        direct_deposit_amount=args.direct_deposit_amount,
+        bonus_amount=args.bonus_amount,
+        include_direct_deposits=not args.no_direct_deposits,
+        include_bonuses=not args.no_bonuses
+    )
+    
+    # Save to CSV with proper quoting to handle commas and special characters
+    # quoting=0 is csv.QUOTE_MINIMAL - only quotes fields containing special characters
+    df.to_csv(args.output_file, index=False, quoting=0)
+    print(f"\nSuccess! Generated {len(df)} transactions.")
+    print(f"Output saved to: {args.output_file}")
+    
+    # Display summary statistics
+    print("\n" + "="*60)
+    print("TRANSACTION SUMMARY")
+    print("="*60)
+    print(f"Total Transactions: {len(df)}")
+    print(f"Date Range: {df['TransactionDate'].min()} to {df['TransactionDate'].max()}")
+    print(f"\nAccount Types:")
+    print(df['Account_Type'].value_counts())
+    print(f"\nTransaction Types:")
+    print(df['Transaction_Type'].value_counts())
+    print(f"\nTotal Debits: ${df[df['Transaction_Type'] == 'Debit']['Amount'].sum():,.2f}")
+    print(f"Total Credits: ${df[df['Transaction_Type'] == 'Credit']['Amount'].sum():,.2f}")
+    print(f"\nTop 5 Transaction Categories:")
+    print(df['Transaction_Category'].value_counts().head())
+    
+    # Show breakdown by account type
+    if len(df['Account_Type'].unique()) > 1:
+        print(f"\n" + "-"*60)
+        print("BREAKDOWN BY ACCOUNT TYPE")
+        print("-"*60)
+        for acc_type in df['Account_Type'].unique():
+            acc_df = df[df['Account_Type'] == acc_type]
+            print(f"\n{acc_type} Accounts:")
+            print(f"  Transactions: {len(acc_df)}")
+            print(f"  Total Credits: ${acc_df[acc_df['Transaction_Type'] == 'Credit']['Amount'].sum():,.2f}")
+            print(f"  Total Debits: ${acc_df[acc_df['Transaction_Type'] == 'Debit']['Amount'].sum():,.2f}")
+            print(f"  Avg Transaction: ${acc_df['Amount'].mean():.2f}")
+            print(f"  Top 3 Categories: {', '.join(acc_df['Transaction_Category'].value_counts().head(3).index.tolist())}")
+
+
+if __name__ == "__main__":
+    main()
