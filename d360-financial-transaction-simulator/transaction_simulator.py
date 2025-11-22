@@ -184,19 +184,23 @@ class TransactionSimulator:
         return amount
     
     def generate_transactions(self, account_ids, start_date, end_date, num_records, 
-                            account_types=None,
+                            account_types=None, sf_account_ids=None, contact_ids=None,
                             direct_deposit_amount=3000.00, bonus_amount=500.00,
                             include_direct_deposits=True, include_bonuses=True):
         """
         Generate financial transactions.
         
         Args:
-            account_ids: List of account IDs or single account ID string
+            account_ids: List of account IDs (account numbers) or single account ID string
             start_date: Start date for transactions (string or datetime)
             end_date: End date for transactions (string or datetime)
             num_records: Total number of records to generate
             account_types: Dict mapping account_id to 'personal' or 'business', or single type string
                           If None, defaults to 'personal' for all accounts
+            sf_account_ids: Dict/list mapping account_id to Salesforce Account ID, or single SF ID
+                           If None, defaults to account_ids
+            contact_ids: Dict/list mapping account_id to Contact ID, or single Contact ID
+                        If None, defaults to empty string
             direct_deposit_amount: Fixed amount for direct deposits (default: 3000.00)
             bonus_amount: Fixed amount for bonuses (default: 500.00)
             include_direct_deposits: Whether to include direct deposits (default: True)
@@ -228,6 +232,46 @@ class TransactionSimulator:
                                for i in range(len(account_ids))}
         else:
             raise ValueError("account_types must be None, string, dict, or list")
+        
+        # Handle sf_account_ids parameter
+        if sf_account_ids is None:
+            # Default to account_ids
+            sf_account_ids_map = {acc_id: acc_id for acc_id in account_ids}
+        elif isinstance(sf_account_ids, str):
+            # Single SF Account ID for all accounts
+            sf_account_ids_map = {acc_id: sf_account_ids for acc_id in account_ids}
+        elif isinstance(sf_account_ids, dict):
+            # Use provided mapping, default to account_id if not specified
+            sf_account_ids_map = {acc_id: sf_account_ids.get(acc_id, acc_id) 
+                                 for acc_id in account_ids}
+        elif isinstance(sf_account_ids, list):
+            # List of SF IDs matching account_ids order
+            if len(sf_account_ids) != len(account_ids):
+                raise ValueError("Length of sf_account_ids list must match account_ids list")
+            sf_account_ids_map = {account_ids[i]: sf_account_ids[i] 
+                                 for i in range(len(account_ids))}
+        else:
+            raise ValueError("sf_account_ids must be None, string, dict, or list")
+        
+        # Handle contact_ids parameter
+        if contact_ids is None:
+            # Default to empty string
+            contact_ids_map = {acc_id: '' for acc_id in account_ids}
+        elif isinstance(contact_ids, str):
+            # Single Contact ID for all accounts
+            contact_ids_map = {acc_id: contact_ids for acc_id in account_ids}
+        elif isinstance(contact_ids, dict):
+            # Use provided mapping, default to empty string if not specified
+            contact_ids_map = {acc_id: contact_ids.get(acc_id, '') 
+                              for acc_id in account_ids}
+        elif isinstance(contact_ids, list):
+            # List of Contact IDs matching account_ids order
+            if len(contact_ids) != len(account_ids):
+                raise ValueError("Length of contact_ids list must match account_ids list")
+            contact_ids_map = {account_ids[i]: contact_ids[i] if contact_ids[i] else '' 
+                              for i in range(len(account_ids))}
+        else:
+            raise ValueError("contact_ids must be None, string, dict, or list")
         
         # Convert dates to datetime
         if isinstance(start_date, str):
@@ -266,7 +310,6 @@ class TransactionSimulator:
                         trans_date = current_date
                         transactions.append({
                             'AccountID': account_id,
-                            'Account_Type': account_type.title(),
                             'TransactionID': str(uuid.uuid4()),
                             'PostingDate': trans_date,
                             'TransactionDate': trans_date,
@@ -279,7 +322,10 @@ class TransactionSimulator:
                             'Currency': 'USD',
                             'Transaction_Type': self.direct_deposit_mcc['Tran_Type'],
                             'Source_Transaction_Type': self.direct_deposit_mcc['Tran_Type'],
-                            'Data_Date': data_date
+                            'Data_Date': data_date,
+                            'SFAccountID': sf_account_ids_map[account_id],
+                            'ContactID': contact_ids_map[account_id],
+                            'Account_Type': account_type.title()
                         })
                     
                     # Second deposit (15th of month)
@@ -289,7 +335,6 @@ class TransactionSimulator:
                             if mid_month >= start_date and mid_month <= end_date:
                                 transactions.append({
                                     'AccountID': account_id,
-                                    'Account_Type': account_type.title(),
                                     'TransactionID': str(uuid.uuid4()),
                                     'PostingDate': mid_month,
                                     'TransactionDate': mid_month,
@@ -302,7 +347,10 @@ class TransactionSimulator:
                                     'Currency': 'USD',
                                     'Transaction_Type': self.direct_deposit_mcc['Tran_Type'],
                                     'Source_Transaction_Type': self.direct_deposit_mcc['Tran_Type'],
-                                    'Data_Date': data_date
+                                    'Data_Date': data_date,
+                                    'SFAccountID': sf_account_ids_map[account_id],
+                                    'ContactID': contact_ids_map[account_id],
+                                    'Account_Type': account_type.title()
                                 })
                         except ValueError:
                             pass  # Handle months with fewer than 15 days (shouldn't happen)
@@ -342,7 +390,6 @@ class TransactionSimulator:
                         if last_day >= start_date and last_day <= end_date:
                             transactions.append({
                                 'AccountID': account_id,
-                                'Account_Type': account_type.title(),
                                 'TransactionID': str(uuid.uuid4()),
                                 'PostingDate': last_day,
                                 'TransactionDate': last_day,
@@ -355,7 +402,10 @@ class TransactionSimulator:
                                 'Currency': 'USD',
                                 'Transaction_Type': bonus_mcc['Tran_Type'],
                                 'Source_Transaction_Type': bonus_mcc['Tran_Type'],
-                                'Data_Date': data_date
+                                'Data_Date': data_date,
+                                'SFAccountID': sf_account_ids_map[account_id],
+                                'ContactID': contact_ids_map[account_id],
+                                'Account_Type': account_type.title()
                             })
                         
                         # Move to next month
@@ -386,7 +436,6 @@ class TransactionSimulator:
             # Create transaction
             transactions.append({
                 'AccountID': account_id,
-                'Account_Type': account_type.title(),
                 'TransactionID': str(uuid.uuid4()),
                 'PostingDate': trans_date,
                 'TransactionDate': trans_date,
@@ -399,7 +448,10 @@ class TransactionSimulator:
                 'Currency': 'USD',
                 'Transaction_Type': mcc_row['Tran_Type'],
                 'Source_Transaction_Type': mcc_row['Tran_Type'],
-                'Data_Date': data_date
+                'Data_Date': data_date,
+                'SFAccountID': sf_account_ids_map[account_id],
+                'ContactID': contact_ids_map[account_id],
+                'Account_Type': account_type.title()
             })
         
         # Create DataFrame
@@ -420,6 +472,10 @@ def main():
                        help='One or more account IDs (space-separated)')
     parser.add_argument('--account-types', type=str, nargs='+', default=None,
                        help='Account types for each account ID: "personal" or "business" (space-separated, must match account-ids order). If not provided, defaults to personal for all accounts.')
+    parser.add_argument('--sf-account-ids', type=str, nargs='+', default=None,
+                       help='Salesforce Account IDs for each account (space-separated, must match account-ids order). If not provided, defaults to account-ids.')
+    parser.add_argument('--contact-ids', type=str, nargs='+', default=None,
+                       help='Contact IDs for each account (space-separated, must match account-ids order). If not provided, defaults to empty string.')
     parser.add_argument('--start-date', type=str, required=True,
                        help='Start date for transactions (YYYY-MM-DD)')
     parser.add_argument('--end-date', type=str, required=True,
@@ -456,6 +512,18 @@ def main():
                 print(f"ERROR: Invalid account type '{acc_type}'. Must be 'personal' or 'business'")
                 sys.exit(1)
     
+    # Validate sf_account_ids if provided
+    if args.sf_account_ids:
+        if len(args.sf_account_ids) != len(args.account_ids):
+            print(f"ERROR: Number of SF Account IDs ({len(args.sf_account_ids)}) must match number of account IDs ({len(args.account_ids)})")
+            sys.exit(1)
+    
+    # Validate contact_ids if provided
+    if args.contact_ids:
+        if len(args.contact_ids) != len(args.account_ids):
+            print(f"ERROR: Number of Contact IDs ({len(args.contact_ids)}) must match number of account IDs ({len(args.account_ids)})")
+            sys.exit(1)
+    
     # Generate transactions
     print(f"Generating {args.num_records} transactions...")
     print(f"Account IDs: {', '.join(args.account_ids)}")
@@ -463,6 +531,10 @@ def main():
         print(f"Account Types: {', '.join(args.account_types)}")
     else:
         print(f"Account Types: personal (default for all)")
+    if args.sf_account_ids:
+        print(f"SF Account IDs: {', '.join(args.sf_account_ids)}")
+    if args.contact_ids:
+        print(f"Contact IDs: {', '.join(args.contact_ids)}")
     print(f"Date Range: {args.start_date} to {args.end_date}")
     
     df = simulator.generate_transactions(
@@ -471,6 +543,8 @@ def main():
         end_date=args.end_date,
         num_records=args.num_records,
         account_types=args.account_types,
+        sf_account_ids=args.sf_account_ids,
+        contact_ids=args.contact_ids,
         direct_deposit_amount=args.direct_deposit_amount,
         bonus_amount=args.bonus_amount,
         include_direct_deposits=not args.no_direct_deposits,

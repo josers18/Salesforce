@@ -1,325 +1,325 @@
-mcc,description,category,Tran_Type,Tran_category,
-742,Veterinary Services,Agricultural services,Debit,Business Services,
-763,Agricultural Co-operatives,Agricultural services,Debit,Business Services,
-780,Landscaping and Horticultural Services,Agricultural services,Debit,Business Services,
-1520,General Contractors Residential and Commercial,Contracted services,Debit,Business Services,
-1711,"Heating, Plumbing, and Air Conditioning Contractors",Contracted services,Debit,Business Services,
-1731,Electrical Contractors,Contracted services,Debit,Business Services,
-1740,"Masonry, Stonework, Tile Setting, Plastering and Insulation Contractors",Contracted services,Debit,Business Services,
-1750,Carpentry Contractors,Contracted services,Debit,Business Services,
-1761,"Roofing, Siding, and Sheet Metal Work Contractors",Contracted services,Debit,Business Services,
-1771,Concrete Work Contractors,Contracted services,Debit,Business Services,
-1799,Special Trade Contractors (Not Elsewhere Classified),Contracted services,Debit,Business Services,
-2741,Miscellaneous Publishing and Printing,Contracted services,Debit,Business Services,
-2791,"Typesetting, Plate Making and Related Services",Contracted services,Debit,Business Services,
-2842,"Specialty Cleaning, Polishing and Sanitation Preparations",Contracted services,Debit,Business Services,
-3000,UNITED AIRLINES,Airlines,Debit,Auto & Transport,
-3001,AMERICAN AIRLINES,Airlines,Debit,Auto & Transport,
-3005,BRITISH AIRWAYS,Airlines,Debit,Auto & Transport,
-3006,JAPAN AIRLINES,Airlines,Debit,Auto & Transport,
-3007,AIR FRANCE,Airlines,Debit,Auto & Transport,
-3355,SIXT CAR RENTAL,Auto Rental,Debit,Auto & Transport,
-3357,HERTZ,Auto Rental,Debit,Auto & Transport,
-3389,AVIS RENT-A-CAR,Auto Rental,Debit,Auto & Transport,
-3405,ENTERPRISE RENT-A-CAR,Auto Rental,Debit,Auto & Transport,
-3503,SHERATON,Hotels,Debit,Travel,
-3504,HILTON HOTELS,Hotels,Debit,Travel,
-3509,MARRIOTT,Hotels,Debit,Travel,
-3512,INTER-CONTINENTAL HOTELS,Hotels,Debit,Travel,
-3523,PENINSULA HOTEL,Hotels,Debit,Travel,
-3543,FOUR SEASONS HOTELS,Hotels,Debit,Travel,
-3577,MANDARIN ORIENTAL HOTEL,Hotels,Debit,Travel,
-4011,Railroads,Transportation,Debit,Auto & Transport,
-4111,"Local and Suburban Commuter Passenger Transportation, Including Ferries",Transportation,Debit,Auto & Transport,
-4112,Passenger Railways,Transportation,Debit,Auto & Transport,
-4119,Ambulance Services,Transportation,Debit,Auto & Transport,
-4121,Taxicabs and Limousines,Transportation,Debit,Auto & Transport,
-4131,Bus Lines,Transportation,Debit,Auto & Transport,
-4214,"Motor Freight Carriers and Trucking Local and Long Distance, Moving and Storage Companies, and Local Delivery",Transportation,Debit,Auto & Transport,
-4215,"Courier Services Air and Ground, and Freight Forwarders",Transportation,Debit,Auto & Transport,
-4225,"Public Warehousing and Storage Farm Products, Refrigerated Goods, Household Goods, and Storage",Transportation,Debit,Auto & Transport,
-4411,Steamship and Cruise Lines,Transportation,Debit,Auto & Transport,
-4457,Boat Rentals and Leasing,Transportation,Debit,Auto & Transport,
-4468,"Marinas, Marine Service, and Supplies",Transportation,Debit,Auto & Transport,
-4511,Airlines and Air Carriers (Not Elsewhere Classified),Transportation,Debit,Auto & Transport,
-4582,"Airports, Flying Fields, and Airport Terminals",Transportation,Debit,Auto & Transport,
-4722,Travel Agencies and Tour Operators,Transportation,Debit,Auto & Transport,
-4723,Package Tour Operators Germany Only,Transportation,Debit,Auto & Transport,
-4784,Tolls and Bridge Fees,Transportation,Debit,Auto & Transport,
-4789,Transportation Services (Not Elsewhere Classified),Transportation,Debit,Auto & Transport,
-4812,Telecommunication Equipment and Telephone Sales,Utilities,Debit,Bills & Utilities,
-4814,"Telecommunication Services, including Local and Long Distance Calls, Credit Card Calls, Calls Through Use of Magnetic-",Utilities,Debit,Bills & Utilities,
-4816,Computer Network/Information Services,Utilities,Debit,Bills & Utilities,
-4821,Telegraph Services,Utilities,Debit,Bills & Utilities,
-4829,Money Transfer,Utilities,Debit,Bills & Utilities,
-4899,"Cable, Satellite and Other Pay Television/Radio/Streaming Services",Utilities,Debit,Bills & Utilities,
-4900,"Utilities Electric, Gas, Water, and Sanitary",Utilities,Debit,Bills & Utilities,
-5013,Motor Vehicle Supplies and New Parts,Retail outlets,Debit,Shopping,
-5021,Office and Commercial Furniture,Retail outlets,Debit,Shopping,
-5039,Construction Materials (Not Elsewhere Classified ),Retail outlets,Debit,Shopping,
-5044,"Photographic, Photocopy, Microfilm Equipment and Supplies",Retail outlets,Debit,Shopping,
-5045,Computers and Computer Peripheral Equipment and Software,Retail outlets,Debit,Shopping,
-5046,Commercial Equipment (Not Elsewhere Classified),Retail outlets,Debit,Shopping,
-5047,"Medical, Dental, Ophthalmic and Hospital Equipment and Supplies",Retail outlets,Debit,Shopping,
-5051,Metal Service Centers and Offices,Retail outlets,Debit,Shopping,
-5065,Electrical Parts and Equipment,Retail outlets,Debit,Shopping,
-5072,"Hardware, Equipment and Supplies",Retail outlets,Debit,Shopping,
-5074,Plumbing and Heating Equipment and Supplies,Retail outlets,Debit,Shopping,
-5085,Industrial Supplies (Not Elsewhere Classified),Retail outlets,Debit,Shopping,
-5094,"Precious Stones and Metals, Watches and Jewelry",Retail outlets,Debit,Shopping,
-5099,Durable Goods (Not Elsewhere Classified),Retail outlets,Debit,Shopping,
-5111,"Stationery, Office Supplies, Printing and Writing Paper",Retail outlets,Debit,Shopping,
-5122,"Drugs, Drug Proprietaries, and Druggist Sundries",Retail outlets,Debit,Shopping,
-5131,"Piece Goods, Notions, and Other Dry Goods",Retail outlets,Debit,Shopping,
-5137,"Men, Women, and Children Uniforms and Commercial Clothing",Retail outlets,Debit,Shopping,
-5139,Commercial Footwear,Retail outlets,Debit,Shopping,
-5169,Chemicals and Allied Products (Not Elsewhere Classified),Retail outlets,Debit,Shopping,
-5172,Petroleum and Petroleum Products,Retail outlets,Debit,Shopping,
-5192,"Books, Periodicals and Newspapers",Retail outlets,Debit,Shopping,
-5193,"Florists Supplies, Nursery Stock and Flowers",Retail outlets,Debit,Shopping,
-5198,"Paints, Varnishes and Supplies",Retail outlets,Debit,Shopping,
-5199,Nondurable Goods (Not Elsewhere Classified),Retail outlets,Debit,Shopping,
-5200,Home Supply Warehouse Stores,Retail outlets,Debit,Shopping,
-5211,Lumber and Building Materials Stores,Retail outlets,Debit,Shopping,
-5231,"Glass, Paint, and Wallpaper Stores",Retail outlets,Debit,Shopping,
-5251,Hardware Stores,Retail outlets,Debit,Shopping,
-5261,Nurseries and Lawn and Garden Supply Stores,Retail outlets,Debit,Shopping,
-5262,Marketplaces,Retail outlets,Debit,Shopping,
-5271,Mobile Home Dealers,Retail outlets,Debit,Shopping,
-5300,Wholesale Clubs,Retail outlets,Debit,Shopping,
-5309,Duty Free Stores,Retail outlets,Debit,Shopping,
-5310,Discount Stores,Retail outlets,Debit,Shopping,
-5311,Department Stores,Retail outlets,Debit,Shopping,
-5331,Variety Stores,Retail outlets,Debit,Shopping,
-5399,Miscellaneous General Merchandise,Retail outlets,Debit,Shopping,
-5411,Grocery Stores and Supermarkets,Retail outlets,Debit,Shopping,
-5422,Freezer and Locker Meat Provisioners,Retail outlets,Debit,Shopping,
-5441,"Candy, Nut, and Confectionery Stores",Retail outlets,Debit,Shopping,
-5451,Dairy Products Stores,Retail outlets,Debit,Shopping,
-5462,Bakeries,Retail outlets,Debit,Shopping,
-5499,Miscellaneous Food Stores Convenience Stores and Specialty Markets,Retail outlets,Debit,Shopping,
-5511,"Car and Truck Dealers (New and Used) Sales, Service, Repairs, Parts, and Leasing",Retail outlets,Debit,Shopping,
-5521,"Car and Truck Dealers (Used Only) Sales, Service, Repairs, Parts, and Leasing",Retail outlets,Debit,Shopping,
-5532,Automotive Tire Stores,Retail outlets,Debit,Shopping,
-5533,Automotive Parts and Accessories Stores,Retail outlets,Debit,Shopping,
-5541,Service Stations (With or without Ancillary Services),Retail outlets,Debit,Shopping,
-5542,Automated Fuel Dispensers,Retail outlets,Debit,Shopping,
-5551,Boat Dealers,Retail outlets,Debit,Shopping,
-5552,Electric Vehicle Charging,Retail outlets,Debit,Shopping,
-5561,"Camper, Recreational and Utility Trailer Dealers",Retail outlets,Debit,Shopping,
-5571,Motorcycle Shops and Dealers,Retail outlets,Debit,Shopping,
-5592,Motor Homes Dealers,Retail outlets,Debit,Shopping,
-5598,Snowmobile Dealers,Retail outlets,Debit,Shopping,
-5599,"Miscellaneous Automotive, Aircraft, and Farm Equipment Dealers (Not Elsewhere Classified)",Retail outlets,Debit,Shopping,
-5611,Men and Boys Clothing and Accessories Stores,Clothing outlets,Debit,Shopping,
-5621,Women Ready-To-Wear Stores ..,Clothing outlets,Debit,Shopping,
-5631,Women Accessory and Specialty Shops,Clothing outlets,Debit,Shopping,
-5641,Children and Infants Wear Stores,Clothing outlets,Debit,Shopping,
-5651,Family Clothing Stores,Clothing outlets,Debit,Shopping,
-5655,Sports and Riding Apparel Stores,Clothing outlets,Debit,Shopping,
-5661,Shoe Stores,Clothing outlets,Debit,Shopping,
-5681,Furriers and Fur Shops,Clothing outlets,Debit,Shopping,
-5691,Men and Women Clothing Stores,Clothing outlets,Debit,Shopping,
-5697,"Tailors, Seamstresses, Mending, and Alterations",Clothing outlets,Debit,Shopping,
-5698,Wig and Toupee Stores,Clothing outlets,Debit,Shopping,
-5699,Miscellaneous Apparel and Accessory Shops,Clothing outlets,Debit,Shopping,
-5712,"Furniture, Home Furnishings, and Equipment Stores, Except Appliances",Miscellaneous outlets,Debit,Shopping,
-5713,Floor Covering Stores,Miscellaneous outlets,Debit,Shopping,
-5714,"Drapery, Window Covering, and Upholstery Stores",Miscellaneous outlets,Debit,Shopping,
-5718,"Fireplace, Fireplace Screens and Accessories Stores",Miscellaneous outlets,Debit,Shopping,
-5719,Miscellaneous Home Furnishing Specialty Stores,Miscellaneous outlets,Debit,Shopping,
-5722,Household Appliance Stores,Miscellaneous outlets,Debit,Shopping,
-5732,Electronics Stores,Miscellaneous outlets,Debit,Shopping,
-5733,"Music Stores Musical Instruments, Pianos, and Sheet Music",Miscellaneous outlets,Debit,Shopping,
-5734,Computer Software Stores,Miscellaneous outlets,Debit,Shopping,
-5735,Record Stores,Miscellaneous outlets,Debit,Shopping,
-5811,Caterers,Miscellaneous outlets,Debit,Shopping,
-5812,Eating Places and Restaurants,Restaurants,Debit,Food & Dining,
-5813,"Drinking Places (Alcoholic Beverages) Bars, Taverns, Nightclubs, Cocktail Lounges, and Discotheques",Restaurants,Debit,Food & Dining,
-5814,Fast Food Restaurants,Restaurants,Debit,Food & Dining,
-5815,"Digital Goods Media Books, Movies, Music",Miscellaneous outlets,Debit,Shopping,
-5816,Digital Goods Games,Miscellaneous outlets,Debit,Shopping,
-5817,Digital Goods Applications (Excludes Games),Miscellaneous outlets,Debit,Shopping,
-5818,Digital Goods Large Digital Goods Merchant,Miscellaneous outlets,Debit,Shopping,
-5912,Drug Stores and Pharmacies,Miscellaneous outlets,Debit,Shopping,
-5921,"Package Stores Beer, Wine, and Liquor",Miscellaneous outlets,Debit,Shopping,
-5931,Used Merchandise and Secondhand Stores,Miscellaneous outlets,Debit,Shopping,
-5932,"Antique Shops Sales, Repairs, and Restoration Services",Miscellaneous outlets,Debit,Shopping,
-5933,Pawn Shops,Miscellaneous outlets,Debit,Shopping,
-5935,Wrecking and Salvage Yards,Miscellaneous outlets,Debit,Shopping,
-5937,Antique Reproductions,Miscellaneous outlets,Debit,Shopping,
-5940,Bicycle Shops Sales and Service,Miscellaneous outlets,Debit,Shopping,
-5941,Sporting Goods Stores,Miscellaneous outlets,Debit,Shopping,
-5942,Book Stores,Miscellaneous outlets,Debit,Shopping,
-5943,"Stationery Stores, Office and School Supply Stores",Miscellaneous outlets,Debit,Shopping,
-5944,"Jewelry Stores, Watches, Clocks, and Silverware Stores",Miscellaneous outlets,Debit,Shopping,
-5945,"Hobby, Toy, and Game Shops",Miscellaneous outlets,Debit,Shopping,
-5946,Camera and Photographic Supply Stores,Miscellaneous outlets,Debit,Shopping,
-5947,"Gift, Card, Novelty and Souvenir Shops",Miscellaneous outlets,Debit,Shopping,
-5948,Luggage and Leather Goods Stores,Miscellaneous outlets,Debit,Shopping,
-5949,"Sewing, Needlework, Fabric and Piece Goods Stores",Miscellaneous outlets,Debit,Shopping,
-5950,Glassware/Crystal Stores,Miscellaneous outlets,Debit,Shopping,
-5960,Direct Marketing Insurance Services,Miscellaneous outlets,Debit,Shopping,
-5962,Direct Marketing Travel-Related Arrangement Services,Miscellaneous outlets,Debit,Shopping,
-5963,Door-To-Door Sales,Miscellaneous outlets,Debit,Shopping,
-5964,Direct Marketing Catalog Merchant,Miscellaneous outlets,Debit,Shopping,
-5965,Direct Marketing Combination Catalog and Retail Merchant,Miscellaneous outlets,Debit,Shopping,
-5966,Direct Marketing Outbound Telemarketing Merchant,Miscellaneous outlets,Debit,Shopping,
-5967,Direct Marketing Inbound Teleservices Merchant,Miscellaneous outlets,Debit,Shopping,
-5968,Direct Marketing Continuity/Subscription Merchant,Miscellaneous outlets,Debit,Shopping,
-5969,Direct Marketing Other Direct Marketers (Not Elsewhere Classified),Miscellaneous outlets,Debit,Shopping,
-5970,Artist Supply and Craft Shops,Miscellaneous outlets,Debit,Shopping,
-5971,Art Dealers and Galleries,Miscellaneous outlets,Debit,Shopping,
-5972,Stamp and Coin Stores,Miscellaneous outlets,Debit,Shopping,
-5973,Religious Goods Stores,Miscellaneous outlets,Debit,Shopping,
-5975,"Hearing Aids Sales, Service, and Supply",Miscellaneous outlets,Debit,Shopping,
-5976,Orthopedic Goods Prosthetic Devices,Miscellaneous outlets,Debit,Shopping,
-5977,Cosmetic Stores,Miscellaneous outlets,Debit,Shopping,
-5978,"Typewriter Stores Sales, Rentals, and Service",Miscellaneous outlets,Debit,Shopping,
-5983,"Fuel Dealers Fuel Oil, Wood, Coal, and Liquefied Petroleum",Miscellaneous outlets,Debit,Shopping,
-5992,Florists,Miscellaneous outlets,Debit,Shopping,
-5993,Cigar Stores and Stands,Miscellaneous outlets,Debit,Shopping,
-5994,News Dealers and Newsstands,Miscellaneous outlets,Debit,Shopping,
-5995,"Pet Shops, Pet Foods and Supplies Stores",Miscellaneous outlets,Debit,Shopping,
-5996,Swimming Pools Sales and Service,Miscellaneous outlets,Debit,Shopping,
-5997,Electric Razor Stores Sales and Service,Miscellaneous outlets,Debit,Shopping,
-5998,Tent and Awning Shops,Miscellaneous outlets,Debit,Shopping,
-5999,Miscellaneous and Specialty Retail Shops,Miscellaneous outlets,Debit,Shopping,
-6010,Financial Institutions Manual Cash Disbursements,Service providers,Debit,Business Services,
-6011,Financial Institutions Automated Cash Disbursements,Service providers,Debit,Business Services,
-6012,"Financial Institutions Merchandise, Services, and Debt Repayment",Service providers,Debit,Business Services,
-6051,"Non-Financial Institutions Foreign Currency, Non-Fiat Currency (for example: Cryptocurrency), Money Orders (Not Money",Service providers,Debit,Business Services,
-6211,Security Brokers/Dealers,Service providers,Debit,Business Services,
-6300,"Insurance Sales, Underwriting, and Premiums",Service providers,Debit,Business Services,
-6513,Real Estate Agents and Managers,Service providers,Debit,Business Services,
-6540,Non-Financial Institutions Stored Value Card Purchase/Load,Service providers,Debit,Business Services,
-7011,"Lodging Hotels, Motels, Resorts, Central Reservation Services (Not Elsewhere Classified)",Service providers,Debit,Business Services,
-7012,Timeshares,Service providers,Debit,Business Services,
-7032,Sporting and Recreational Camps,Service providers,Debit,Business Services,
-7033,Trailer Parks and Campgrounds,Service providers,Debit,Business Services,
-7210,"Laundry, Cleaning, and Garment Services",Service providers,Debit,Business Services,
-7211,Laundries Family and Commercial,Service providers,Debit,Business Services,
-7216,Dry Cleaners,Service providers,Debit,Business Services,
-7217,Carpet and Upholstery Cleaning,Service providers,Debit,Business Services,
-7221,Photographic Studios,Service providers,Debit,Business Services,
-7230,Beauty and Barber Shops,Service providers,Debit,Business Services,
-7251,"Shoe Repair Shops, Shoe Shine Parlors, and Hat Cleaning Shops",Service providers,Debit,Business Services,
-7261,Funeral Services and Crematories,Service providers,Debit,Business Services,
-7273,Dating Services,Service providers,Debit,Business Services,
-7276,Tax Preparation Services,Service providers,Debit,Business Services,
-7277,"Counseling Services Debt, Marriage, and Personal",Service providers,Debit,Business Services,
-7278,Buying and Shopping Services and Clubs,Service providers,Debit,Business Services,
-7296,"Clothing Rental Costumes, Uniforms, Formal Wear",Service providers,Debit,Business Services,
-7297,Massage Parlors,Service providers,Debit,Business Services,
-7298,Health and Beauty Spas,Service providers,Debit,Business Services,Health & Fitness
-7299,Miscellaneous Personal Services (Not Elsewhere Classified),Service providers,Debit,Business Services,
-7311,Advertising Services,Business services,Debit,Business Services,
-7321,Consumer Credit Reporting Agencies,Business services,Debit,Business Services,
-7333,"Commercial Photography, Art, and Graphics",Business services,Debit,Business Services,
-7338,"Quick Copy, Reproduction, and Blueprinting Services",Business services,Debit,Business Services,
-7339,Stenographic and Secretarial Support,Business services,Debit,Business Services,
-7342,Exterminating and Disinfecting Services,Business services,Debit,Business Services,
-7349,"Cleaning, Maintenance, and Janitorial Services",Business services,Debit,Business Services,
-7361,Employment Agencies and Temporary Help Services,Business services,Debit,Business Services,
-7372,"Computer Programming, Data Processing, and Integrated Systems Design Services",Business services,Debit,Business Services,
-7375,Information Retrieval Services,Business services,Debit,Business Services,
-7379,"Computer Maintenance, Repair and Services (Not Elsewhere Classified)",Business services,Debit,Business Services,
-7392,"Management, Consulting, and Public Relations Services",Business services,Debit,Business Services,
-7393,"Detective Agencies, Protective Services, and Security Services, including Armored Cars, and Guard Dogs",Business services,Debit,Business Services,
-7394,"Equipment, Tool, Furniture, and Appliance Rental and Leasing",Business services,Debit,Business Services,
-7395,Photofinishing Laboratories and Photo Developing,Business services,Debit,Business Services,
-7399,Business Services (Not Elsewhere Classified),Business services,Debit,Business Services,
-7512,Automobile Rental Agency,Business services,Debit,Business Services,
-7513,Truck and Utility Trailer Rentals,Business services,Debit,Business Services,
-7519,Motor Home and Recreational Vehicle Rentals,Business services,Debit,Business Services,
-7523,"Parking Lots, Parking Meters and Garages",Business services,Debit,Business Services,
-7531,Automotive Body Repair Shops,Repair services,Debit,Business Services,
-7534,Tire Retreading and Repair Shops,Repair services,Debit,Business Services,
-7535,Automotive Paint Shops,Repair services,Debit,Business Services,
-7538,Automotive Service Shops (Non-Dealer),Repair services,Debit,Business Services,
-7542,Car Washes,Repair services,Debit,Business Services,
-7549,Towing Services,Repair services,Debit,Business Services,
-7622,Electronics Repair Shops,Repair services,Debit,Business Services,
-7623,Air Conditioning and Refrigeration Repair Shops,Repair services,Debit,Business Services,
-7629,Electrical and Small Appliance Repair Shops,Repair services,Debit,Business Services,
-7631,"Watch, Clock and Jewelry Repair",Repair services,Debit,Business Services,
-7641,"Furniture Reupholstery, Repair, and Refinishing",Repair services,Debit,Business Services,
-7692,Welding Services,Repair services,Debit,Business Services,
-7699,Miscellaneous Repair Shops and Related Services,Repair services,Debit,Business Services,
-7800,Government-Owned Lotteries (US Region only),Amusement and entertainment,Debit,Entertainment,
-7801,Government Licensed On-Line Casinos (On-Line Gambling) (US Region only),Amusement and entertainment,Debit,Entertainment,
-7802,Government-Licensed Horse/Dog Racing (US Region only),Amusement and entertainment,Debit,Entertainment,
-7829,Motion Picture and Video Tape Production and Distribution,Amusement and entertainment,Debit,Entertainment,
-7832,Motion Picture Theaters,Amusement and entertainment,Debit,Entertainment,
-7841,DVD/Video Tape Rental Stores,Amusement and entertainment,Debit,Entertainment,
-7911,"Dance Halls, Studios and Schools",Amusement and entertainment,Debit,Education,
-7922,Ticket Agencies and Theatrical Producers (Except Motion Pictures),Amusement and entertainment,Debit,Entertainment,
-7929,"Bands, Orchestras, and Miscellaneous Entertainers (Not Elsewhere Classified)",Amusement and entertainment,Debit,Entertainment,
-7932,Billiard and Pool Establishments,Amusement and entertainment,Debit,Entertainment,
-7933,Bowling Alleys,Amusement and entertainment,Debit,Entertainment,
-7941,"Commercial Sports, Professional Sports Clubs, Athletic Fields, and Sports Promoters",Amusement and entertainment,Debit,Entertainment,
-7991,Tourist Attractions and Exhibits,Amusement and entertainment,Debit,Entertainment,
-7992,Public Golf Courses,Amusement and entertainment,Debit,Entertainment,
-7993,Video Amusement Game Supplies,Amusement and entertainment,Debit,Entertainment,
-7994,Video Game Arcades/Establishments,Amusement and entertainment,Debit,Entertainment,
-7995,"Betting, including Lottery Tickets, Casino Gaming Chips, Off-Track Betting, and Wagers at Race Tracks",Amusement and entertainment,Debit,Entertainment,
-7996,"Amusement Parks, Circuses, Carnivals, and Fortune Tellers",Amusement and entertainment,Debit,Entertainment,
-7997,"Membership Clubs (Sports, Recreation, Athletic), Country Clubs, and Private Golf Courses",Amusement and entertainment,Debit,Entertainment,
-7998,"Aquariums, Seaquariums, Dolphinariums, and Zoos",Amusement and entertainment,Debit,Entertainment,
-7999,Recreation Services (Not Elsewhere Classified),Amusement and entertainment,Debit,Entertainment,
-8011,Doctors and Physicians (Not Elsewhere Classified),Professional services and membership organizations,Debit,Health & Fitness,
-8021,Dentists and Orthodontists,Professional services and membership organizations,Debit,Health & Fitness,
-8031,Osteopaths,Professional services and membership organizations,Debit,Health & Fitness,
-8041,Chiropractors,Professional services and membership organizations,Debit,Health & Fitness,
-8042,Optometrists and Ophthalmologists,Professional services and membership organizations,Debit,Health & Fitness,
-8043,"Opticians, Optical Goods, and Eyeglasses",Professional services and membership organizations,Debit,Health & Fitness,
-8049,Podiatrists and Chiropodists,Professional services and membership organizations,Debit,Health & Fitness,
-8050,Nursing and Personal Care Facilities,Professional services and membership organizations,Debit,Health & Fitness,
-8062,Hospitals,Professional services and membership organizations,Debit,Health & Fitness,
-8071,Medical and Dental Laboratories,Professional services and membership organizations,Debit,Health & Fitness,
-8099,Medical Services and Health Practitioners (Not Elsewhere Classified),Professional services and membership organizations,Debit,Health & Fitness,
-8111,Legal Services and Attorneys,Professional services and membership organizations,Debit,Business Services,
-8211,Elementary and Secondary Schools,Professional services and membership organizations,Debit,Education,
-8220,"Colleges, Universities, Professional Schools, and Junior Colleges",Professional services and membership organizations,Debit,Education,
-8241,Correspondence Schools,Professional services and membership organizations,Debit,Education,
-8244,Business and Secretarial Schools,Professional services and membership organizations,Debit,Education,
-8249,Vocational and Trade Schools,Professional services and membership organizations,Debit,Education,
-8299,Schools and Educational Services (Not Elsewhere Classified),Professional services and membership organizations,Debit,Education,
-8351,Child Care Services,Professional services and membership organizations,Debit,Education,
-8398,Charitable Social Service Organizations,Professional services and membership organizations,Debit,Gifts & Donations,
-8641,"Civic, Social, and Fraternal Associations",Professional services and membership organizations,Debit,Gifts & Donations,
-8651,Political Organizations,Professional services and membership organizations,Debit,Business Services,
-8661,Religious Organizations,Professional services and membership organizations,Debit,Business Services,
-8675,Automobile Associations,Professional services and membership organizations,Debit,Business Services,
-8699,Membership Organizations (Not Elsewhere Classified),Professional services and membership organizations,Debit,Business Services,
-8734,Testing Laboratories (Non-Medical Testing),Professional services and membership organizations,Debit,Business Services,
-8911,"Architectural, Engineering, and Surveying Services",Professional services and membership organizations,Debit,Business Services,
-8931,"Accounting, Auditing, and Bookkeeping Services",Professional services and membership organizations,Debit,Business Services,
-8999,Professional Services (Not Elsewhere Classified),Professional services and membership organizations,Debit,Business Services,
-9211,"Court Costs, Including Alimony and Child Support",Government services,Debit,Business Services,
-9222,Fines,Government services,Debit,Business Services,
-9223,Bail and Bond Payments,Government services,Debit,Business Services,
-9311,Tax Payments,Government services,Debit,Business Services,
-9399,Government Services (Not Elsewhere Classified),Government services,Debit,Business Services,
-9402,Postal Services Government Only,Government services,Debit,Business Services,
-9405,U.S. Federal Government Agencies or Departments,Other,Debit,Business Services,
-9406,Government-Owned Lotteries (Non-U.S. region),Other,Debit,Business Services,
-9702,Emergency Services (GCAS) (Visa use only),Other,Debit,Business Services,
-9950,Intra-Company Purchases,Other,Debit,Business Services,
-9961,Direct Deposit,Incoming Direct Deposit,Credit,Paycheck,
-9962,Incoming Wire Transfer,Incoming Wire Transfer,Credit,Financial,
-9963,ACH Deposit,ACH Deposit,Credit,Financial,
-9964,ATM Deposit,ATM Deposit,Credit,Financial,
-9965,Branch Deposit,Branch Deposit,Credit,Financial,
-9966,Zelle Credit,Zelle Credit,Credit,Financial,
-9967,Earned Interest,Interest Income,Credit,Interest Income,
-9970,Wire Transfer Fee,Wire Transfer Fee,Debit,Fees & Charges,
-9971,Monthly Service Fee,Monthly Service Fee,Debit,Fees & Charges,
-9972,ACH Fee,ACH Fee,Debit,Fees & Charges,
-9973,Loan Fee,Loan Fee,Debit,Fees & Charges,
-9974,Late Fee,Late Fee,Debit,Fees & Charges,
-9975,Overdraft Fee,Overdraft Fee,Debit,Fees & Charges,
-9976,NSF Fee,NSF Fee,Debit,Fees & Charges,
-9980,Loan Payment,Loan Payment,Debit,Fees & Charges,
-9981,Credit Card Payment,Credit Card Payment,Debit,Fees & Charges,
-9982,Interest Accrued,Interest Accrued,Debit,Fees & Charges,
+mcc,description,category,Tran_Type,Tran_category
+742,Veterinary Services,Agricultural services,Debit,Business Services
+763,Agricultural Co-operatives,Agricultural services,Debit,Business Services
+780,Landscaping and Horticultural Services,Agricultural services,Debit,Business Services
+1520,General Contractors Residential and Commercial,Contracted services,Debit,Business Services
+1711,"Heating, Plumbing, and Air Conditioning Contractors",Contracted services,Debit,Business Services
+1731,Electrical Contractors,Contracted services,Debit,Business Services
+1740,"Masonry, Stonework, Tile Setting, Plastering and Insulation Contractors",Contracted services,Debit,Business Services
+1750,Carpentry Contractors,Contracted services,Debit,Business Services
+1761,"Roofing, Siding, and Sheet Metal Work Contractors",Contracted services,Debit,Business Services
+1771,Concrete Work Contractors,Contracted services,Debit,Business Services
+1799,Special Trade Contractors (Not Elsewhere Classified),Contracted services,Debit,Business Services
+2741,Miscellaneous Publishing and Printing,Contracted services,Debit,Business Services
+2791,"Typesetting, Plate Making and Related Services",Contracted services,Debit,Business Services
+2842,"Specialty Cleaning, Polishing and Sanitation Preparations",Contracted services,Debit,Business Services
+3000,UNITED AIRLINES,Airlines,Debit,Auto & Transport
+3001,AMERICAN AIRLINES,Airlines,Debit,Auto & Transport
+3005,BRITISH AIRWAYS,Airlines,Debit,Auto & Transport
+3006,JAPAN AIRLINES,Airlines,Debit,Auto & Transport
+3007,AIR FRANCE,Airlines,Debit,Auto & Transport
+3355,SIXT CAR RENTAL,Auto Rental,Debit,Auto & Transport
+3357,HERTZ,Auto Rental,Debit,Auto & Transport
+3389,AVIS RENT-A-CAR,Auto Rental,Debit,Auto & Transport
+3405,ENTERPRISE RENT-A-CAR,Auto Rental,Debit,Auto & Transport
+3503,SHERATON,Hotels,Debit,Travel
+3504,HILTON HOTELS,Hotels,Debit,Travel
+3509,MARRIOTT,Hotels,Debit,Travel
+3512,INTER-CONTINENTAL HOTELS,Hotels,Debit,Travel
+3523,PENINSULA HOTEL,Hotels,Debit,Travel
+3543,FOUR SEASONS HOTELS,Hotels,Debit,Travel
+3577,MANDARIN ORIENTAL HOTEL,Hotels,Debit,Travel
+4011,Railroads,Transportation,Debit,Auto & Transport
+4111,"Local and Suburban Commuter Passenger Transportation, Including Ferries",Transportation,Debit,Auto & Transport
+4112,Passenger Railways,Transportation,Debit,Auto & Transport
+4119,Ambulance Services,Transportation,Debit,Auto & Transport
+4121,Taxicabs and Limousines,Transportation,Debit,Auto & Transport
+4131,Bus Lines,Transportation,Debit,Auto & Transport
+4214,"Motor Freight Carriers and Trucking Local and Long Distance, Moving and Storage Companies, and Local Delivery",Transportation,Debit,Auto & Transport
+4215,"Courier Services Air and Ground, and Freight Forwarders",Transportation,Debit,Auto & Transport
+4225,"Public Warehousing and Storage Farm Products, Refrigerated Goods, Household Goods, and Storage",Transportation,Debit,Auto & Transport
+4411,Steamship and Cruise Lines,Transportation,Debit,Auto & Transport
+4457,Boat Rentals and Leasing,Transportation,Debit,Auto & Transport
+4468,"Marinas, Marine Service, and Supplies",Transportation,Debit,Auto & Transport
+4511,Airlines and Air Carriers (Not Elsewhere Classified),Transportation,Debit,Auto & Transport
+4582,"Airports, Flying Fields, and Airport Terminals",Transportation,Debit,Auto & Transport
+4722,Travel Agencies and Tour Operators,Transportation,Debit,Auto & Transport
+4723,Package Tour Operators Germany Only,Transportation,Debit,Auto & Transport
+4784,Tolls and Bridge Fees,Transportation,Debit,Auto & Transport
+4789,Transportation Services (Not Elsewhere Classified),Transportation,Debit,Auto & Transport
+4812,Telecommunication Equipment and Telephone Sales,Utilities,Debit,Bills & Utilities
+4814,"Telecommunication Services, including Local and Long Distance Calls, Credit Card Calls, Calls Through Use of Magnetic-",Utilities,Debit,Bills & Utilities
+4816,Computer Network/Information Services,Utilities,Debit,Bills & Utilities
+4821,Telegraph Services,Utilities,Debit,Bills & Utilities
+4829,Money Transfer,Utilities,Debit,Bills & Utilities
+4899,"Cable, Satellite and Other Pay Television/Radio/Streaming Services",Utilities,Debit,Bills & Utilities
+4900,"Utilities Electric, Gas, Water, and Sanitary",Utilities,Debit,Bills & Utilities
+5013,Motor Vehicle Supplies and New Parts,Retail outlets,Debit,Shopping
+5021,Office and Commercial Furniture,Retail outlets,Debit,Shopping
+5039,Construction Materials (Not Elsewhere Classified ),Retail outlets,Debit,Shopping
+5044,"Photographic, Photocopy, Microfilm Equipment and Supplies",Retail outlets,Debit,Shopping
+5045,Computers and Computer Peripheral Equipment and Software,Retail outlets,Debit,Shopping
+5046,Commercial Equipment (Not Elsewhere Classified),Retail outlets,Debit,Shopping
+5047,"Medical, Dental, Ophthalmic and Hospital Equipment and Supplies",Retail outlets,Debit,Shopping
+5051,Metal Service Centers and Offices,Retail outlets,Debit,Shopping
+5065,Electrical Parts and Equipment,Retail outlets,Debit,Shopping
+5072,"Hardware, Equipment and Supplies",Retail outlets,Debit,Shopping
+5074,Plumbing and Heating Equipment and Supplies,Retail outlets,Debit,Shopping
+5085,Industrial Supplies (Not Elsewhere Classified),Retail outlets,Debit,Shopping
+5094,"Precious Stones and Metals, Watches and Jewelry",Retail outlets,Debit,Shopping
+5099,Durable Goods (Not Elsewhere Classified),Retail outlets,Debit,Shopping
+5111,"Stationery, Office Supplies, Printing and Writing Paper",Retail outlets,Debit,Shopping
+5122,"Drugs, Drug Proprietaries, and Druggist Sundries",Retail outlets,Debit,Shopping
+5131,"Piece Goods, Notions, and Other Dry Goods",Retail outlets,Debit,Shopping
+5137,"Men, Women, and Children Uniforms and Commercial Clothing",Retail outlets,Debit,Shopping
+5139,Commercial Footwear,Retail outlets,Debit,Shopping
+5169,Chemicals and Allied Products (Not Elsewhere Classified),Retail outlets,Debit,Shopping
+5172,Petroleum and Petroleum Products,Retail outlets,Debit,Shopping
+5192,"Books, Periodicals and Newspapers",Retail outlets,Debit,Shopping
+5193,"Florists Supplies, Nursery Stock and Flowers",Retail outlets,Debit,Shopping
+5198,"Paints, Varnishes and Supplies",Retail outlets,Debit,Shopping
+5199,Nondurable Goods (Not Elsewhere Classified),Retail outlets,Debit,Shopping
+5200,Home Supply Warehouse Stores,Retail outlets,Debit,Shopping
+5211,Lumber and Building Materials Stores,Retail outlets,Debit,Shopping
+5231,"Glass, Paint, and Wallpaper Stores",Retail outlets,Debit,Shopping
+5251,Hardware Stores,Retail outlets,Debit,Shopping
+5261,Nurseries and Lawn and Garden Supply Stores,Retail outlets,Debit,Shopping
+5262,Marketplaces,Retail outlets,Debit,Shopping
+5271,Mobile Home Dealers,Retail outlets,Debit,Shopping
+5300,Wholesale Clubs,Retail outlets,Debit,Shopping
+5309,Duty Free Stores,Retail outlets,Debit,Shopping
+5310,Discount Stores,Retail outlets,Debit,Shopping
+5311,Department Stores,Retail outlets,Debit,Shopping
+5331,Variety Stores,Retail outlets,Debit,Shopping
+5399,Miscellaneous General Merchandise,Retail outlets,Debit,Shopping
+5411,Grocery Stores and Supermarkets,Retail outlets,Debit,Shopping
+5422,Freezer and Locker Meat Provisioners,Retail outlets,Debit,Shopping
+5441,"Candy, Nut, and Confectionery Stores",Retail outlets,Debit,Shopping
+5451,Dairy Products Stores,Retail outlets,Debit,Shopping
+5462,Bakeries,Retail outlets,Debit,Shopping
+5499,Miscellaneous Food Stores Convenience Stores and Specialty Markets,Retail outlets,Debit,Shopping
+5511,"Car and Truck Dealers (New and Used) Sales, Service, Repairs, Parts, and Leasing",Retail outlets,Debit,Shopping
+5521,"Car and Truck Dealers (Used Only) Sales, Service, Repairs, Parts, and Leasing",Retail outlets,Debit,Shopping
+5532,Automotive Tire Stores,Retail outlets,Debit,Shopping
+5533,Automotive Parts and Accessories Stores,Retail outlets,Debit,Shopping
+5541,Service Stations (With or without Ancillary Services),Retail outlets,Debit,Shopping
+5542,Automated Fuel Dispensers,Retail outlets,Debit,Shopping
+5551,Boat Dealers,Retail outlets,Debit,Shopping
+5552,Electric Vehicle Charging,Retail outlets,Debit,Shopping
+5561,"Camper, Recreational and Utility Trailer Dealers",Retail outlets,Debit,Shopping
+5571,Motorcycle Shops and Dealers,Retail outlets,Debit,Shopping
+5592,Motor Homes Dealers,Retail outlets,Debit,Shopping
+5598,Snowmobile Dealers,Retail outlets,Debit,Shopping
+5599,"Miscellaneous Automotive, Aircraft, and Farm Equipment Dealers (Not Elsewhere Classified)",Retail outlets,Debit,Shopping
+5611,Men and Boys Clothing and Accessories Stores,Clothing outlets,Debit,Shopping
+5621,Women Ready-To-Wear Stores ..,Clothing outlets,Debit,Shopping
+5631,Women Accessory and Specialty Shops,Clothing outlets,Debit,Shopping
+5641,Children and Infants Wear Stores,Clothing outlets,Debit,Shopping
+5651,Family Clothing Stores,Clothing outlets,Debit,Shopping
+5655,Sports and Riding Apparel Stores,Clothing outlets,Debit,Shopping
+5661,Shoe Stores,Clothing outlets,Debit,Shopping
+5681,Furriers and Fur Shops,Clothing outlets,Debit,Shopping
+5691,Men and Women Clothing Stores,Clothing outlets,Debit,Shopping
+5697,"Tailors, Seamstresses, Mending, and Alterations",Clothing outlets,Debit,Shopping
+5698,Wig and Toupee Stores,Clothing outlets,Debit,Shopping
+5699,Miscellaneous Apparel and Accessory Shops,Clothing outlets,Debit,Shopping
+5712,"Furniture, Home Furnishings, and Equipment Stores, Except Appliances",Miscellaneous outlets,Debit,Shopping
+5713,Floor Covering Stores,Miscellaneous outlets,Debit,Shopping
+5714,"Drapery, Window Covering, and Upholstery Stores",Miscellaneous outlets,Debit,Shopping
+5718,"Fireplace, Fireplace Screens and Accessories Stores",Miscellaneous outlets,Debit,Shopping
+5719,Miscellaneous Home Furnishing Specialty Stores,Miscellaneous outlets,Debit,Shopping
+5722,Household Appliance Stores,Miscellaneous outlets,Debit,Shopping
+5732,Electronics Stores,Miscellaneous outlets,Debit,Shopping
+5733,"Music Stores Musical Instruments, Pianos, and Sheet Music",Miscellaneous outlets,Debit,Shopping
+5734,Computer Software Stores,Miscellaneous outlets,Debit,Shopping
+5735,Record Stores,Miscellaneous outlets,Debit,Shopping
+5811,Caterers,Miscellaneous outlets,Debit,Shopping
+5812,Eating Places and Restaurants,Restaurants,Debit,Food & Dining
+5813,"Drinking Places (Alcoholic Beverages) Bars, Taverns, Nightclubs, Cocktail Lounges, and Discotheques",Restaurants,Debit,Food & Dining
+5814,Fast Food Restaurants,Restaurants,Debit,Food & Dining
+5815,"Digital Goods Media Books, Movies, Music",Miscellaneous outlets,Debit,Shopping
+5816,Digital Goods Games,Miscellaneous outlets,Debit,Shopping
+5817,Digital Goods Applications (Excludes Games),Miscellaneous outlets,Debit,Shopping
+5818,Digital Goods Large Digital Goods Merchant,Miscellaneous outlets,Debit,Shopping
+5912,Drug Stores and Pharmacies,Miscellaneous outlets,Debit,Shopping
+5921,"Package Stores Beer, Wine, and Liquor",Miscellaneous outlets,Debit,Shopping
+5931,Used Merchandise and Secondhand Stores,Miscellaneous outlets,Debit,Shopping
+5932,"Antique Shops Sales, Repairs, and Restoration Services",Miscellaneous outlets,Debit,Shopping
+5933,Pawn Shops,Miscellaneous outlets,Debit,Shopping
+5935,Wrecking and Salvage Yards,Miscellaneous outlets,Debit,Shopping
+5937,Antique Reproductions,Miscellaneous outlets,Debit,Shopping
+5940,Bicycle Shops Sales and Service,Miscellaneous outlets,Debit,Shopping
+5941,Sporting Goods Stores,Miscellaneous outlets,Debit,Shopping
+5942,Book Stores,Miscellaneous outlets,Debit,Shopping
+5943,"Stationery Stores, Office and School Supply Stores",Miscellaneous outlets,Debit,Shopping
+5944,"Jewelry Stores, Watches, Clocks, and Silverware Stores",Miscellaneous outlets,Debit,Shopping
+5945,"Hobby, Toy, and Game Shops",Miscellaneous outlets,Debit,Shopping
+5946,Camera and Photographic Supply Stores,Miscellaneous outlets,Debit,Shopping
+5947,"Gift, Card, Novelty and Souvenir Shops",Miscellaneous outlets,Debit,Shopping
+5948,Luggage and Leather Goods Stores,Miscellaneous outlets,Debit,Shopping
+5949,"Sewing, Needlework, Fabric and Piece Goods Stores",Miscellaneous outlets,Debit,Shopping
+5950,Glassware/Crystal Stores,Miscellaneous outlets,Debit,Shopping
+5960,Direct Marketing Insurance Services,Miscellaneous outlets,Debit,Shopping
+5962,Direct Marketing Travel-Related Arrangement Services,Miscellaneous outlets,Debit,Shopping
+5963,Door-To-Door Sales,Miscellaneous outlets,Debit,Shopping
+5964,Direct Marketing Catalog Merchant,Miscellaneous outlets,Debit,Shopping
+5965,Direct Marketing Combination Catalog and Retail Merchant,Miscellaneous outlets,Debit,Shopping
+5966,Direct Marketing Outbound Telemarketing Merchant,Miscellaneous outlets,Debit,Shopping
+5967,Direct Marketing Inbound Teleservices Merchant,Miscellaneous outlets,Debit,Shopping
+5968,Direct Marketing Continuity/Subscription Merchant,Miscellaneous outlets,Debit,Shopping
+5969,Direct Marketing Other Direct Marketers (Not Elsewhere Classified),Miscellaneous outlets,Debit,Shopping
+5970,Artist Supply and Craft Shops,Miscellaneous outlets,Debit,Shopping
+5971,Art Dealers and Galleries,Miscellaneous outlets,Debit,Shopping
+5972,Stamp and Coin Stores,Miscellaneous outlets,Debit,Shopping
+5973,Religious Goods Stores,Miscellaneous outlets,Debit,Shopping
+5975,"Hearing Aids Sales, Service, and Supply",Miscellaneous outlets,Debit,Shopping
+5976,Orthopedic Goods Prosthetic Devices,Miscellaneous outlets,Debit,Shopping
+5977,Cosmetic Stores,Miscellaneous outlets,Debit,Shopping
+5978,"Typewriter Stores Sales, Rentals, and Service",Miscellaneous outlets,Debit,Shopping
+5983,"Fuel Dealers Fuel Oil, Wood, Coal, and Liquefied Petroleum",Miscellaneous outlets,Debit,Shopping
+5992,Florists,Miscellaneous outlets,Debit,Shopping
+5993,Cigar Stores and Stands,Miscellaneous outlets,Debit,Shopping
+5994,News Dealers and Newsstands,Miscellaneous outlets,Debit,Shopping
+5995,"Pet Shops, Pet Foods and Supplies Stores",Miscellaneous outlets,Debit,Shopping
+5996,Swimming Pools Sales and Service,Miscellaneous outlets,Debit,Shopping
+5997,Electric Razor Stores Sales and Service,Miscellaneous outlets,Debit,Shopping
+5998,Tent and Awning Shops,Miscellaneous outlets,Debit,Shopping
+5999,Miscellaneous and Specialty Retail Shops,Miscellaneous outlets,Debit,Shopping
+6010,Financial Institutions Manual Cash Disbursements,Service providers,Debit,Business Services
+6011,Financial Institutions Automated Cash Disbursements,Service providers,Debit,Business Services
+6012,"Financial Institutions Merchandise, Services, and Debt Repayment",Service providers,Debit,Business Services
+6051,"Non-Financial Institutions Foreign Currency, Non-Fiat Currency (for example: Cryptocurrency), Money Orders (Not Money",Service providers,Debit,Business Services
+6211,Security Brokers/Dealers,Service providers,Debit,Business Services
+6300,"Insurance Sales, Underwriting, and Premiums",Service providers,Debit,Business Services
+6513,Real Estate Agents and Managers,Service providers,Debit,Business Services
+6540,Non-Financial Institutions Stored Value Card Purchase/Load,Service providers,Debit,Business Services
+7011,"Lodging Hotels, Motels, Resorts, Central Reservation Services (Not Elsewhere Classified)",Service providers,Debit,Business Services
+7012,Timeshares,Service providers,Debit,Business Services
+7032,Sporting and Recreational Camps,Service providers,Debit,Business Services
+7033,Trailer Parks and Campgrounds,Service providers,Debit,Business Services
+7210,"Laundry, Cleaning, and Garment Services",Service providers,Debit,Business Services
+7211,Laundries Family and Commercial,Service providers,Debit,Business Services
+7216,Dry Cleaners,Service providers,Debit,Business Services
+7217,Carpet and Upholstery Cleaning,Service providers,Debit,Business Services
+7221,Photographic Studios,Service providers,Debit,Business Services
+7230,Beauty and Barber Shops,Service providers,Debit,Business Services
+7251,"Shoe Repair Shops, Shoe Shine Parlors, and Hat Cleaning Shops",Service providers,Debit,Business Services
+7261,Funeral Services and Crematories,Service providers,Debit,Business Services
+7273,Dating Services,Service providers,Debit,Business Services
+7276,Tax Preparation Services,Service providers,Debit,Business Services
+7277,"Counseling Services Debt, Marriage, and Personal",Service providers,Debit,Business Services
+7278,Buying and Shopping Services and Clubs,Service providers,Debit,Business Services
+7296,"Clothing Rental Costumes, Uniforms, Formal Wear",Service providers,Debit,Business Services
+7297,Massage Parlors,Service providers,Debit,Business Services
+7298,Health and Beauty Spas,Service providers,Debit,Business Services
+7299,Miscellaneous Personal Services (Not Elsewhere Classified),Service providers,Debit,Business Services
+7311,Advertising Services,Business services,Debit,Business Services
+7321,Consumer Credit Reporting Agencies,Business services,Debit,Business Services
+7333,"Commercial Photography, Art, and Graphics",Business services,Debit,Business Services
+7338,"Quick Copy, Reproduction, and Blueprinting Services",Business services,Debit,Business Services
+7339,Stenographic and Secretarial Support,Business services,Debit,Business Services
+7342,Exterminating and Disinfecting Services,Business services,Debit,Business Services
+7349,"Cleaning, Maintenance, and Janitorial Services",Business services,Debit,Business Services
+7361,Employment Agencies and Temporary Help Services,Business services,Debit,Business Services
+7372,"Computer Programming, Data Processing, and Integrated Systems Design Services",Business services,Debit,Business Services
+7375,Information Retrieval Services,Business services,Debit,Business Services
+7379,"Computer Maintenance, Repair and Services (Not Elsewhere Classified)",Business services,Debit,Business Services
+7392,"Management, Consulting, and Public Relations Services",Business services,Debit,Business Services
+7393,"Detective Agencies, Protective Services, and Security Services, including Armored Cars, and Guard Dogs",Business services,Debit,Business Services
+7394,"Equipment, Tool, Furniture, and Appliance Rental and Leasing",Business services,Debit,Business Services
+7395,Photofinishing Laboratories and Photo Developing,Business services,Debit,Business Services
+7399,Business Services (Not Elsewhere Classified),Business services,Debit,Business Services
+7512,Automobile Rental Agency,Business services,Debit,Business Services
+7513,Truck and Utility Trailer Rentals,Business services,Debit,Business Services
+7519,Motor Home and Recreational Vehicle Rentals,Business services,Debit,Business Services
+7523,"Parking Lots, Parking Meters and Garages",Business services,Debit,Business Services
+7531,Automotive Body Repair Shops,Repair services,Debit,Business Services
+7534,Tire Retreading and Repair Shops,Repair services,Debit,Business Services
+7535,Automotive Paint Shops,Repair services,Debit,Business Services
+7538,Automotive Service Shops (Non-Dealer),Repair services,Debit,Business Services
+7542,Car Washes,Repair services,Debit,Business Services
+7549,Towing Services,Repair services,Debit,Business Services
+7622,Electronics Repair Shops,Repair services,Debit,Business Services
+7623,Air Conditioning and Refrigeration Repair Shops,Repair services,Debit,Business Services
+7629,Electrical and Small Appliance Repair Shops,Repair services,Debit,Business Services
+7631,"Watch, Clock and Jewelry Repair",Repair services,Debit,Business Services
+7641,"Furniture Reupholstery, Repair, and Refinishing",Repair services,Debit,Business Services
+7692,Welding Services,Repair services,Debit,Business Services
+7699,Miscellaneous Repair Shops and Related Services,Repair services,Debit,Business Services
+7800,Government-Owned Lotteries (US Region only),Amusement and entertainment,Debit,Entertainment
+7801,Government Licensed On-Line Casinos (On-Line Gambling) (US Region only),Amusement and entertainment,Debit,Entertainment
+7802,Government-Licensed Horse/Dog Racing (US Region only),Amusement and entertainment,Debit,Entertainment
+7829,Motion Picture and Video Tape Production and Distribution,Amusement and entertainment,Debit,Entertainment
+7832,Motion Picture Theaters,Amusement and entertainment,Debit,Entertainment
+7841,DVD/Video Tape Rental Stores,Amusement and entertainment,Debit,Entertainment
+7911,"Dance Halls, Studios and Schools",Amusement and entertainment,Debit,Education
+7922,Ticket Agencies and Theatrical Producers (Except Motion Pictures),Amusement and entertainment,Debit,Entertainment
+7929,"Bands, Orchestras, and Miscellaneous Entertainers (Not Elsewhere Classified)",Amusement and entertainment,Debit,Entertainment
+7932,Billiard and Pool Establishments,Amusement and entertainment,Debit,Entertainment
+7933,Bowling Alleys,Amusement and entertainment,Debit,Entertainment
+7941,"Commercial Sports, Professional Sports Clubs, Athletic Fields, and Sports Promoters",Amusement and entertainment,Debit,Entertainment
+7991,Tourist Attractions and Exhibits,Amusement and entertainment,Debit,Entertainment
+7992,Public Golf Courses,Amusement and entertainment,Debit,Entertainment
+7993,Video Amusement Game Supplies,Amusement and entertainment,Debit,Entertainment
+7994,Video Game Arcades/Establishments,Amusement and entertainment,Debit,Entertainment
+7995,"Betting, including Lottery Tickets, Casino Gaming Chips, Off-Track Betting, and Wagers at Race Tracks",Amusement and entertainment,Debit,Entertainment
+7996,"Amusement Parks, Circuses, Carnivals, and Fortune Tellers",Amusement and entertainment,Debit,Entertainment
+7997,"Membership Clubs (Sports, Recreation, Athletic), Country Clubs, and Private Golf Courses",Amusement and entertainment,Debit,Entertainment
+7998,"Aquariums, Seaquariums, Dolphinariums, and Zoos",Amusement and entertainment,Debit,Entertainment
+7999,Recreation Services (Not Elsewhere Classified),Amusement and entertainment,Debit,Entertainment
+8011,Doctors and Physicians (Not Elsewhere Classified),Professional services and membership organizations,Debit,Health & Fitness
+8021,Dentists and Orthodontists,Professional services and membership organizations,Debit,Health & Fitness
+8031,Osteopaths,Professional services and membership organizations,Debit,Health & Fitness
+8041,Chiropractors,Professional services and membership organizations,Debit,Health & Fitness
+8042,Optometrists and Ophthalmologists,Professional services and membership organizations,Debit,Health & Fitness
+8043,"Opticians, Optical Goods, and Eyeglasses",Professional services and membership organizations,Debit,Health & Fitness
+8049,Podiatrists and Chiropodists,Professional services and membership organizations,Debit,Health & Fitness
+8050,Nursing and Personal Care Facilities,Professional services and membership organizations,Debit,Health & Fitness
+8062,Hospitals,Professional services and membership organizations,Debit,Health & Fitness
+8071,Medical and Dental Laboratories,Professional services and membership organizations,Debit,Health & Fitness
+8099,Medical Services and Health Practitioners (Not Elsewhere Classified),Professional services and membership organizations,Debit,Health & Fitness
+8111,Legal Services and Attorneys,Professional services and membership organizations,Debit,Business Services
+8211,Elementary and Secondary Schools,Professional services and membership organizations,Debit,Education
+8220,"Colleges, Universities, Professional Schools, and Junior Colleges",Professional services and membership organizations,Debit,Education
+8241,Correspondence Schools,Professional services and membership organizations,Debit,Education
+8244,Business and Secretarial Schools,Professional services and membership organizations,Debit,Education
+8249,Vocational and Trade Schools,Professional services and membership organizations,Debit,Education
+8299,Schools and Educational Services (Not Elsewhere Classified),Professional services and membership organizations,Debit,Education
+8351,Child Care Services,Professional services and membership organizations,Debit,Education
+8398,Charitable Social Service Organizations,Professional services and membership organizations,Debit,Gifts & Donations
+8641,"Civic, Social, and Fraternal Associations",Professional services and membership organizations,Debit,Gifts & Donations
+8651,Political Organizations,Professional services and membership organizations,Debit,Business Services
+8661,Religious Organizations,Professional services and membership organizations,Debit,Business Services
+8675,Automobile Associations,Professional services and membership organizations,Debit,Business Services
+8699,Membership Organizations (Not Elsewhere Classified),Professional services and membership organizations,Debit,Business Services
+8734,Testing Laboratories (Non-Medical Testing),Professional services and membership organizations,Debit,Business Services
+8911,"Architectural, Engineering, and Surveying Services",Professional services and membership organizations,Debit,Business Services
+8931,"Accounting, Auditing, and Bookkeeping Services",Professional services and membership organizations,Debit,Business Services
+8999,Professional Services (Not Elsewhere Classified),Professional services and membership organizations,Debit,Business Services
+9211,"Court Costs, Including Alimony and Child Support",Government services,Debit,Business Services
+9222,Fines,Government services,Debit,Business Services
+9223,Bail and Bond Payments,Government services,Debit,Business Services
+9311,Tax Payments,Government services,Debit,Business Services
+9399,Government Services (Not Elsewhere Classified),Government services,Debit,Business Services
+9402,Postal Services Government Only,Government services,Debit,Business Services
+9405,U.S. Federal Government Agencies or Departments,Other,Debit,Business Services
+9406,Government-Owned Lotteries (Non-U.S. region),Other,Debit,Business Services
+9702,Emergency Services (GCAS) (Visa use only),Other,Debit,Business Services
+9950,Intra-Company Purchases,Other,Debit,Business Services
+9961,Direct Deposit,Incoming Direct Deposit,Credit,Paycheck
+9962,Incoming Wire Transfer,Incoming Wire Transfer,Credit,Financial
+9963,ACH Deposit,ACH Deposit,Credit,Financial
+9964,ATM Deposit,ATM Deposit,Credit,Financial
+9965,Branch Deposit,Branch Deposit,Credit,Financial
+9966,Zelle Credit,Zelle Credit,Credit,Financial
+9967,Earned Interest,Interest Income,Credit,Interest Income
+9970,Wire Transfer Fee,Wire Transfer Fee,Debit,Fees & Charges
+9971,Monthly Service Fee,Monthly Service Fee,Debit,Fees & Charges
+9972,ACH Fee,ACH Fee,Debit,Fees & Charges
+9973,Loan Fee,Loan Fee,Debit,Fees & Charges
+9974,Late Fee,Late Fee,Debit,Fees & Charges
+9975,Overdraft Fee,Overdraft Fee,Debit,Fees & Charges
+9976,NSF Fee,NSF Fee,Debit,Fees & Charges
+9980,Loan Payment,Loan Payment,Debit,Fees & Charges
+9981,Credit Card Payment,Credit Card Payment,Debit,Fees & Charges
+9982,Interest Accrued,Interest Accrued,Debit,Fees & Charges
